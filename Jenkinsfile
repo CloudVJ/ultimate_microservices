@@ -7,7 +7,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
-                        sh "docker build -t CLoudVJ/adservice:latest ."
+                        sh "docker build -t cloudvj/adservice:latest ."
                     }
                 }
             }
@@ -17,7 +17,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
-                        sh "docker push CLoudVJ/adservice:latest "
+                        sh "docker push cloudvj/adservice:latest "
                     }
                 }
             }
