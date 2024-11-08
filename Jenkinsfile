@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
-                        sh "docker build -t CloudVJ/currencyservice:latest ."
+                        sh "docker build -t cloudvj/currencyservice:latest ."
                     }
                 }
             }
@@ -16,7 +16,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
-                        sh "docker push CloudVJ/currencyservice:latest "
+                        sh "docker push cloudvj/currencyservice:latest "
                     }
                 }
             }
